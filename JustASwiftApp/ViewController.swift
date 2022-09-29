@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  JustASwiftApp
 //
-//  Created by 아톰릭스랩 on 2022/09/28.
+//  Created by Saul Lee on 2022/09/28.
 //
 
 import UIKit
