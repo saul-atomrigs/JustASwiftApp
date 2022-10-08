@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        imgOn = UIImage(named: "ic_address_on.png")
-        imgOff = UIImage(named: "ic_address_off.png")
+        imgOn = UIImage(named: "img_on.png")
+        imgOff = UIImage(named: "img_off.png")
         
         imgView.image = imgOn
     }
