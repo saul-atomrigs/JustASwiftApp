@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet var btnResize: UIButton!
     @IBOutlet var lblHello: UILabel!
     @IBOutlet var txtName: UITextField!
+    @IBOutlet var lblCurrentTime: UILabel!
+    @IBOutlet var lblPickerTime: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,12 @@ class ViewController: UIViewController {
     }
     @IBAction func btnSend(_ sender: UIButton) {
         lblHello.text = "Hello, " + txtName.text!
+    }
+    @IBAction func changeDatePicker(_ sender: UIDatePicker) {
+        let datePickerView = sender
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm EEE"
+        lblPickerTime.text = "선택시간: " + formatter.string(from: datePickerView.date)
     }
 }
 

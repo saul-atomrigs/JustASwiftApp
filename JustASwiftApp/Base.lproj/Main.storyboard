@@ -59,6 +59,28 @@
                                     <action selector="switchImageOnOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="NVz-Rz-qVI"/>
                                 </connections>
                             </switch>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="3QN-2p-2fC">
+                                <rect key="frame" x="-5" y="286" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <locale key="locale" localeIdentifier="ko_KR"/>
+                                <connections>
+                                    <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="W9v-b7-Mft"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="현재시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3C8-7A-oYZ">
+                                <rect key="frame" x="82" y="456" width="228" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Id-jy-5yh">
+                                <rect key="frame" x="82" y="495" width="228" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -66,7 +88,9 @@
                     <connections>
                         <outlet property="btnResize" destination="YMN-lP-FTa" id="NOC-cY-WGg"/>
                         <outlet property="imgView" destination="Abv-mO-2PH" id="jO1-jQ-RIr"/>
+                        <outlet property="lblCurrentTime" destination="3C8-7A-oYZ" id="Pby-Cs-6wA"/>
                         <outlet property="lblHello" destination="Pyv-zI-OdO" id="xeO-Uy-En9"/>
+                        <outlet property="lblPickerTime" destination="4Id-jy-5yh" id="5rX-xn-kbu"/>
                         <outlet property="txtName" destination="vdF-hg-FNY" id="NYR-je-QA8"/>
                     </connections>
                 </viewController>
