@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
     var isZoom = false
@@ -21,6 +22,15 @@ class ViewController: UIViewController {
     @IBOutlet var txtName: UITextField!
     @IBOutlet var lblCurrentTime: UILabel!
     @IBOutlet var lblPickerTime: UILabel!
+    @IBOutlet var txtUrl: UITextField!
+    @IBOutlet var myWebView: WKWebView!
+    @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
+    
+    func loadWebPage(_ url: String) {
+        let myUrl = URL(string: url)
+        let myRequest = URLRequest(url: myUrl!)
+        myWebView.load(myRequest)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +42,8 @@ class ViewController: UIViewController {
         imgView.image = imgOn
         
         Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+        
+        loadWebPage("http://2sam.net")
     }
 
 
@@ -77,6 +89,14 @@ class ViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss EEE"
         lblCurrentTime.text = "현재시간: " + formatter.string(from: date as Date)
+    }
+    @IBAction func btnGoSite1(_ sender: UIButton) {
+    }
+    @IBAction func btnGoSite2(_ sender: UIButton) {
+    }
+    @IBAction func btnLoadHtmlString(_ sender: UIButton) {
+    }
+    @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
     }
 }
 
